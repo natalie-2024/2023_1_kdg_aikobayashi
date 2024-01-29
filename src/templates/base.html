@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}Django Sample App{% endblock %}</title>
+
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+    rel="stylesheet" />
+
+    {% include 'head/css.html' %}
+
+</head>
+<body>
+    <div class="flex flex-col h-screen dark:bg-neutral-800">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    <script src="{% static "js/theme_pref.js" %}"></script>
+    <script
+    src="{% static 'tw-elements/dist/js/tw-elements.umd.min.js' %}"
+    type="text/javascript"></script>
+</body>
+
+</html>
